@@ -1,0 +1,22 @@
+<mat-card class="isp-event">
+  <mat-card-title>{{ meetup.title }}</mat-card-title>
+  <mat-card-content>{{ meetup.description }}</mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-flat-button
+      color="primary"
+      class="isp-event__button"
+      (click)="clickedMeetup.emit(meetup.id)"
+    >
+      Click to emit
+    </button>
+    <a
+      mat-flat-button
+      color="primary"
+      class="isp-event__button"
+      [routerLink]="meetup.id"
+    >
+      Click to details page
+    </a>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,16 @@
+
+<h3 class="isp-events__title">{{ title }}</h3>
+
+<button mat-button (click)="createMeetup()">Добавить мероприятие</button>
+<button mat-button (click)="updateMeetups()">Обновить мероприятия</button>
+
+<div class="isp-events__list">
+  <ng-container *ngFor="let meetup of meetups">
+    <app-meetup
+      [meetup]="meetup"
+      (clickedMeetup)="childClicked($event)"
+    >
+    </app-meetup>
+  </ng-container>
+</div>
+

@@ -1,0 +1,31 @@
+.isp-footer {
+  display: flex;
+}
+.isp-footer__row {
+  display: flex;
+  justify-content: center;
+  color: gray;
+}
+.isp_footer__placeholder {
+  display: block;
+  height: 64px;
+}
+.isp-content {
+  padding-top: 1px;
+  min-height: calc(100vh - 129px);
+}
+.isp-logo {
+  margin: 0;
+  min-width: 111px;
+  height: 40px;
+  border-radius: 4px;
+}
+.isp-logo__img {
+  object-fit: contain;
+  object-position: center;
+}
+.isp-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
