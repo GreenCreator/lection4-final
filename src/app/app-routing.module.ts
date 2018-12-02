@@ -1,32 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { EventsListComponent } from './events/event-list/events-list.component';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { MeetupsListComponent } from './meetups/meetup-list/meetups-list.component';
-import { MeetupPageComponent } from './meetups/meetup-page/meetup-page.component';
+import { EventPageComponent } from './events/event-page/event-page.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'meetups',
-    pathMatch: 'full',
-  },
-  {
-    path: 'meetups',
-    component: MeetupsListComponent,
-  },
-  {
-    path: 'meetups/:id',
-    component: MeetupPageComponent
-  },
-  {
     path: 'about',
-    component: AboutPageComponent,
+    component: AboutPageComponent
   },
+  {
+    path: 'events/:id',
+    component: EventPageComponent
+  },
+  {
+    path: 'events',
+    component: EventsListComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'events',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

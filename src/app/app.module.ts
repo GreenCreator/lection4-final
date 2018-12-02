@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { EventsModule } from './events/events.module';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { MeetupsModule } from './meetups/meetups.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,12 @@ import { MeetupsModule } from './meetups/meetups.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    EventsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
-    MeetupsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+<mat-card class="isp-event">
+  <mat-card-title>{{ event.title }}</mat-card-title>
+  <mat-card-content>{{ event.description }}</mat-card-content>
+  <mat-card-actions>
+    <button
+        mat-flat-button
+        color="primary"
+        class="isp-event__button"
+        (click)="clickedEvent.emit(event.id)">
+      Click to emit
+    </button>
+    <a
+        mat-flat-button
+        color="primary"
+        class="isp-event__button"
+        [routerLink]="event.id">
+      Click to details page
+    </a>
+  </mat-card-actions>
+
+</mat-card>

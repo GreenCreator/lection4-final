@@ -1,0 +1,20 @@
+<h3 class="isp-events__title">{{ title }}</h3>
+<div class="isp-events__button-group">
+  <button
+      mat-flat-button
+      color="accent"
+      (click)="toggleModal()">
+    Add event
+  </button>
+</div>
+
+<div class="isp-events__list">
+  <ng-container *ngFor="let event of eventList">
+    <app-event
+        [event]="event"
+        (clickedEvent)="childClicked($event)">
+    </app-event>
+  </ng-container>
+</div>
+
+<app-create-event *ngIf="isShowModal" (eventClose)="toggleModal()"></app-create-event>
