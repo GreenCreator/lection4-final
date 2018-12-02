@@ -8,13 +8,15 @@ import { RouterModule } from '@angular/router';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventsService } from './events.service';
 import { FormsModule } from '@angular/forms';
+import { QuestionWindowComponent } from './question-window/question-window.component';
 
 @NgModule({
   declarations: [
     EventsListComponent,
     EventComponent,
     EventPageComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    QuestionWindowComponent
   ],
   imports: [
     CommonModule,

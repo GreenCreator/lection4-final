@@ -9,7 +9,7 @@
 </div>
 
 <div class="isp-events__list">
-  <ng-container *ngFor="let event of eventList">
+  <ng-container *ngFor="let event of events">
     <app-event
         [event]="event"
         (clickedEvent)="childClicked($event)">
@@ -17,4 +17,4 @@
   </ng-container>
 </div>
 
-<app-create-event *ngIf="isShowModal" (eventClose)="toggleModal()"></app-create-event>
+<app-create-event *ngIf="isShowModal" (eventClosed)="toggleModal()"></app-create-event>

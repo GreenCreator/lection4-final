@@ -1,8 +1,5 @@
-import { IEvent } from './events.interface';
-
 export class EventsService {
-  /** список мероприятий */
-  public list: IEvent[] = [
+  list: { id: number; title: string; description: string; }[] = [
     { id: 1, title: 'Event one', description: 'This is event. One of many. There will be more.'},
     { id: 2, title: 'Event one', description: 'This is event. One of many. There will be more.'},
     { id: 3, title: 'Event one', description: 'This is event. One of many. There will be more.'},
@@ -14,17 +11,22 @@ export class EventsService {
   ];
 
 
-  /**
-   * Метод для добавления элемента в список мероприятий
-   * @param item - данные для добавления в список
-   */
-  public addItem(item: {title: string, description: string}) {
-    const id = this.list.length + 1;
-    this.list.push({
-      id,
-      title: item.title,
-      description: item.description,
-    });
-  }
+addItem(item: {title: string, description: string}) {
+  const id = this.list.length + 1;
+  this.list.push({
+    id,
+    title: item.title,
+    description: item.description,
+  });
+ }
+ deleteItem(item: {title: string, description: string}) {
+  const id = this.list.length + 1;
+  this.list.push({
+    id,
+    title: item.title,
+    description: item.description,
+  });
+ }
 
+ 
 }
