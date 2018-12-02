@@ -9,7 +9,7 @@
 </div>
 
 <div class="isp-events__list">
-  <ng-container *ngFor="let event of eventList">
+  <ng-container *ngFor="let event of events">
     <app-event
         [event]="event"
         (clickedEvent)="childClicked($event)">

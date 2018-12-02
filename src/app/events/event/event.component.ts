@@ -1,15 +1,18 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IEvent } from '../events.interface';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.scss']
 })
-export class EventComponent {
-  /** событие срабатывающее при нажатии на кнопку "Click to emit" */
+export class EventComponent implements OnInit {
   @Output() clickedEvent = new EventEmitter<string>();
 
-  /** принимаемый из родительского компонента объект мероприяния */
-  @Input() event: IEvent;
+  @Input() event: { id: number; title: string; description: string; };
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
