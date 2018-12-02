@@ -7,16 +7,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./event-page.component.scss']
 })
 export class EventPageComponent implements OnInit {
-  eventID: number;
+  /** идентификатор события */
+  eventId: number;
 
-  constructor(
-    private _activatedRoute: ActivatedRoute
-  ) { }
+  constructor(private _activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
+    // подписка на поток изменений параметров роута */
     this._activatedRoute.params.subscribe(
       (data) => {
-        this.eventID = data.id;
+        this.eventId = data.id;
       }
     );
   }
